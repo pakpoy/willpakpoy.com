@@ -32,7 +32,8 @@ var letters1 = 0;
 
 
 $.getJSON('https://api.quotable.io/random', function(data) {
-  txt = data.content + ' -' + data.author
+  txt = data.content + ' -' + data.author;
+  startLoadingStuff();
 })
 
 
@@ -110,7 +111,6 @@ function removeHomeToMiddle() {
 }
 
 
-startLoadingStuff();
 </script>
 
 
