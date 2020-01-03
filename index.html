@@ -22,12 +22,19 @@
 
 
 <script>
+
 var headtxt = '</will>';
 var v = 0;
 var x = 0;
-var txt = 'Yep, I have a website now.';
+var txt = null
 var speed = 100;
 var letters1 = 0;
+
+
+$.getJSON('https://api.quotable.io/random', function(data) {
+  txt = data.content + ' -' + data.author
+})
+
 
 function startLoadingStuff() {
 	secondtypeWriter();
@@ -39,7 +46,7 @@ function secondtypeWriter() {
     x++;
     setTimeout(secondtypeWriter, speed);
   }
-	else if (x == 7) {
+	else if (x == headtxt.length) {
 		setTimeout(function(){ typeWriter();}, 500);
 
 	}
@@ -51,7 +58,7 @@ function typeWriter() {
     v++;
     setTimeout(typeWriter, speed);
   }
-  else if (v == 26) {
+  else if (v == txt.length) {
 	setTimeout(function(){$(".fadeable").each(function(index) {
     $(this).delay(400*index).animate({opacity: 1}, 1000);
 	});}, 500);
@@ -101,6 +108,7 @@ function removeHomeToMiddle() {
 
 	
 }
+
 
 startLoadingStuff();
 </script>
