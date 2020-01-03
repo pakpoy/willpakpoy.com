@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@font-face {
+        font-family: 'Menlo Regular';
+        font-style: normal;
+        font-weight: normal;
+        src: url('font/Menlo.woff') format('woff');
+}
+	body {
+		background-color: #28292F;
+		text-align: center;
+        color: #70ad47;
+	}
+	.readmore {
+		color: #70ad47;
+        font-family: 'Menlo Regular';
+        font-size: 25px
+    } 
+    
+    .textbody {
+		color: #70ad47;
+        font-family: 'Menlo Regular';
+        font-size: 20px
+    }
+
+    
+    .imgcss {
+        filter: invert(64%) sepia(27%) saturate(820%) hue-rotate(52deg) brightness(90%) contrast(90%);
+        -webkit-filter: invert(64%) sepia(27%) saturate(820%) hue-rotate(52deg) brightness(90%) contrast(90%);
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+		/*visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.5s linear;*/
+    }
+    .imgcss:hover{
+        filter: invert(22%) sepia(91%) saturate(324%) hue-rotate(52deg) brightness(102%) contrast(86%);
+        -webkit-filter: invert(22%) sepia(91%) saturate(324%) hue-rotate(52deg) brightness(102%) contrast(86%);
+
+    }
+    
+    .hover:hover{
+        -webkit-filter: brightness(50%); /* Safari 6.0 - 9.0 */
+        filter: brightness(50%);
+    }
+    .readmorediv {
+        max-width: 500px;
+        margin: auto;
+        border: 3px solid #73AD21;
+            
+    }
+    
+    button {
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor:pointer;
+        overflow: hidden;
+        outline:none;
+    }
+    
+    #more{display: none}
+    
+    /*.morebutton{display: none}*/
+	
+	#coolstuff {
+		font-family: 'Menlo Regular';
+		font-size: 20px
+
+	}
+	
+	#headtxt {
+		font-family: 'Menlo Regular';
+		font-size: 50px
+	}
+	
+	#home-header {
+		transition:top 1s linear;
+	}
+
+	hr {
+        width: auto;
+        max-width: 450px
+    }
+	
+	.fadeable {
+		opacity: 0
+	}

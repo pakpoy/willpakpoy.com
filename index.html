@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title></will></title>
+</head>
+
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="assets/js/readmore.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+
+<div id="home-header">
+<h1 id="headtxt"></h1>
+<p id="coolstuff"></p>
+</div>
+
+
+<script>
+var headtxt = '</will>';
+var v = 0;
+var x = 0;
+var txt = 'Yep, I have a website now.';
+var speed = 100;
+var letters1 = 0;
+
+function startLoadingStuff() {
+	secondtypeWriter();
+}
+
+function secondtypeWriter() {
+  if (x < headtxt.length) {
+    document.getElementById("headtxt").innerHTML += headtxt.charAt(x);
+    x++;
+    setTimeout(secondtypeWriter, speed);
+  }
+	else if (x == 7) {
+		setTimeout(function(){ typeWriter();}, 500);
+
+	}
+}
+
+function typeWriter() {
+  if (v < txt.length) {
+    document.getElementById("coolstuff").innerHTML += txt.charAt(v);
+    v++;
+    setTimeout(typeWriter, speed);
+  }
+  else if (v == 26) {
+	setTimeout(function(){$(".fadeable").each(function(index) {
+    $(this).delay(400*index).animate({opacity: 1}, 1000);
+	});}, 500);
+
+  }
+  
+}
+
+
+var d = document.getElementsByClassName("imgcss");
+
+        
+
+
+function setHomeToMiddle() {
+	var middle = document.getElementById('home-header').style;
+	var willtxt = document.getElementById('headtxt').style;
+	var coolstufftxt = document.getElementById('coolstuff').style;
+	
+	middle.margin = '0';
+	middle.position = 'absolute';
+	middle.top = '50%';
+	middle.left = '50%';
+	middle.marginRight = '-50%';
+	middle.transform = 'translate(-50%, -50%)';
+	
+	willtxt.fontSize = '80px';
+	coolstufftxt.fontSize = '30px';
+	
+}
+
+function removeHomeToMiddle() {
+	var middle = document.getElementById('home-header').style;
+	var willtxt = document.getElementById('headtxt').style;
+	var coolstufftxt = document.getElementById('coolstuff').style;
+	
+	middle.transition = 'top 1s linear';
+	middle.margin = 'initial';
+	middle.position = 'initial';
+	middle.top = 'initial';
+	middle.left = 'initial';
+	middle.marginRight = 'initial';
+	middle.transform = 'initial';
+	
+	willtxt.fontSize = '50px';
+	coolstufftxt.fontSize = '20px';
+
+	
+}
+
+startLoadingStuff();
+</script>
+
+
+<div id="homeimages" style="">
+<hr width="450" color="#70ad47" class="fadeable">
+
+<br>
+<a href="https://instagram.com/pakkie64" target="_blank">
+<img src="assets/svg/apps-insta.svg" alt="Instagram" width="100" class="imgcss fadeable"></a>
+   
+<!--   
+<a href="https://facebook.com/william.pakpoy" target="_blank">
+<img src="assets/svg/apps-facebook.svg" alt="Facebook" width="100" class="imgcss"></a>
+-->
+    
+<a href="https://en.uncyclopedia.co/wiki/This_page_does_NOT_exist" target="_blank">
+<img src="assets/svg/apps-twitter.svg" alt="Twitter" width="100" class="imgcss fadeable"></a>
+
+<br>    
+    
+<a href="https://snapchat.com/add/willthe3rd1990" target="_blank">
+<img src="assets/svg/apps-snapchat.svg" alt="Snapchat" width="100" class="imgcss fadeable"></a>
+
+<a href="https://github.com/pakkie64" target="_blank">
+<img src="assets/svg/apps-github.svg" alt="Github" width="100" class="imgcss fadeable"></a>
+
+
+<br>
+</div>
+<button onclick="myFunction()" id="myBtn" class="readmore hover morebutton fadeable">Read more</button>
+
+
+<span id="dots"></span><span id="more"><br><br>
+<!-- Below this line is what appears when you press the "Read More" button -->
+    
+
+<span class="textbody">
+<p>This is where my biography will go. I am just not bothered to write one.</p>
+<p>If you would like to write one for me, that would be great.</p>
+</span>
+
+    
+</span>
+
+
+
+
+</body>
+</html>

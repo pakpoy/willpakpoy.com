@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+header {
+    display: none
+}
+
+@font-face {
+    font-family: 'Menlo Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('font/Menlo.woff') format('woff');
+
+ .footer {
+    background: #28292F;
+    color: #70ad47;
+    width: 100%;
+    font-family: Menlo Regular
+    }   
+    
+
+
