@@ -18,6 +18,8 @@
 <div id="home-header">
 <h1 id="headtxt"></h1>
 <p id="coolstuff"></p>
+<p id="quote-author"></p>
+
 </div>
 
 
@@ -26,13 +28,16 @@
 var headtxt = '</will>';
 var v = 0;
 var x = 0;
-var txt = null
+var a = 0;
+var txt = null;
+var txtauthor = null;
 var speed = 100;
 var letters1 = 0;
 
 
 $.getJSON('https://api.quotable.io/random', function(data) {
-  txt = data.content + ' -' + data.author;
+  txt = data.content;
+  txtauthor = '- ' + data.author;
   startLoadingStuff();
 })
 
@@ -48,18 +53,30 @@ function secondtypeWriter() {
     setTimeout(secondtypeWriter, speed);
   }
 	else if (x == headtxt.length) {
+		setTimeout(function(){ middletypeWriter();}, 500);
+
+	}
+}
+
+function middletypeWriter() {
+  if (a < txt.length) {
+    document.getElementById("coolstuff").innerHTML += txt.charAt(a);
+    a++;
+    setTimeout(middletypeWriter, speed);
+  }
+	else if (a == txt.length) {
 		setTimeout(function(){ typeWriter();}, 500);
 
 	}
 }
 
 function typeWriter() {
-  if (v < txt.length) {
-    document.getElementById("coolstuff").innerHTML += txt.charAt(v);
+  if (v < txtauthor.length) {
+    document.getElementById("quote-author").innerHTML += txtauthor.charAt(v);
     v++;
     setTimeout(typeWriter, speed);
   }
-  else if (v == txt.length) {
+  else if (v == txtauthor.length) {
 	setTimeout(function(){$(".fadeable").each(function(index) {
     $(this).delay(400*index).animate({opacity: 1}, 1000);
 	});}, 500);

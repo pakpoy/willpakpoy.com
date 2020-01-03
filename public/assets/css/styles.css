@@ -92,3 +92,10 @@
 	.fadeable {
 		opacity: 0
 	}
+	
+	#quote-author {
+		font-family: 'Menlo Regular';
+		font-size: 20px;
+		font-style: italic
+		
+	}
