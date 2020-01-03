@@ -6,7 +6,7 @@
         font-family: 'Menlo Regular';
         font-style: normal;
         font-weight: normal;
-        src: url('font/Menlo.woff') format('woff');
+        src: url('/assets/font/Menlo.woff') format('woff');
 }
 	body {
 		background-color: #28292F;
