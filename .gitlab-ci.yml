@@ -1,10 +1,37 @@
-image: alpine:latest
-pages:
-  stage: deploy
-  script:
-  - echo 'Nothing to do...'
+image: node:8.12.0-jessie
+
+before_script:
+  - node -v
+  - npm -v
+
+stages:
+  - prep
+  - build 
+  - deploy
+
+prep:
+  stage: prep
+  script: 
+    - npm install 
   artifacts:
     paths:
-    - public/
+      - node_modules
+  cache:
+    paths:
+      - node_modules
+
+build:
+  stage: build
+  script:
+    - npm run deploy
+  artifacts:
+    paths:
+      - public
+
+pages:
+  stage: deploy
+  artifacts:
+    paths:
+      - public
   only:
-  - master
+    - master
