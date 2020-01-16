@@ -1,0 +1,39 @@
+@import url('https://rsms.me/inter/inter.css');
+.page#page2 {
+	font-family: 'Inter';
+
+	header {
+		border-bottom: 1px solid lightgrey;
+		background-color: #f0f0f0;
+		align-items: center;
+  		display: flex;
+		height: 90px;
+		.title {
+			font-size: auto;
+			font-weight: bold;
+		}
+
+		.navbutton {
+			background-color: transparent;
+			border: none;
+			color: #000;
+			&:hover {
+				color: darkgrey
+			}
+		}
+	}
+
+	header * {
+		padding: 0px 15px
+	}
+
+	.s2page {
+		display: none;
+
+	}
+
+	.s2active {
+		display: block
+	}
+
+}

@@ -1,0 +1,53 @@
+@charset "utf-8";
+/*! WILL.SCSS - COMPILES TO WILL.CSS */
+
+
+@font-face {
+        font-family: 'Menlo Regular';
+        font-style: normal;
+        font-weight: normal;
+        src: url('/assets/font/Menlo.woff') format('woff');
+}
+
+@font-face {
+        font-family: 'Menlo Regular';
+        font-style: normal;
+        font-weight: normal;
+        src: url('/assets/font/Menlo.woff') format('woff');
+}
+
+@import url('https://rsms.me/inter/inter.css');
+@import '../vendor/normalize';
+
+
+body, html {
+  height: 100%;
+  width: 100%;
+  position: absolute
+}
+body {
+	/*background-color: #28292F;*/
+    margin: 0
+
+}
+
+h1, h2, h3, h4, h5 {margin:0px}
+
+.page {
+    min-height: 100%!important;
+    width: 100%!important;
+    position: relative;
+	display: block
+}
+
+.page#page2 {
+	display: none
+}
+
+/* PAGE 1 */
+
+@import 'sass/_page1';
+
+/* PAGE 2 */
+
+@import 'sass/_page2'
