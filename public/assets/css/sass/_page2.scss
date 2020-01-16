@@ -16,8 +16,9 @@
 		.navbutton {
 			background-color: transparent;
 			border: none;
+			outline: none;
 			color: #000;
-			&:hover {
+			&:hover, &.s2thisactive {
 				color: darkgrey
 			}
 		}

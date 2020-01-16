@@ -59,7 +59,9 @@ function loadMore() {
 
 function s2page(page) {
     $(".s2active").hide();
-    $(".s2active").removeClass("s2active")
-    $(page).show();
-    $(page).addClass("s2active")
+    $(".s2active").removeClass("s2active");
+    $(".s2thisactive").removeClass("s2thisactive");
+    $(".s2page" + page).show();
+    $(".s2page" + page).addClass("s2active");
+    $(".s2button" + page).addClass("s2thisactive");
 }
