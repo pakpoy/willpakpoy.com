@@ -1,0 +1,107 @@
+.page#page1 {
+	text-align: center;
+	color: #70ad47;
+		.readmore {
+			color: #70ad47;
+	        font-family: 'Menlo Regular';
+	        font-size: 25px
+	    }
+
+	    .textbody {
+			color: #70ad47;
+	        font-family: 'Menlo Regular';
+	        font-size: 20px
+	    }
+
+
+	    .imgcss {
+	        filter: invert(64%) sepia(27%) saturate(820%) hue-rotate(52deg) brightness(90%) contrast(90%);
+	        -webkit-filter: invert(64%) sepia(27%) saturate(820%) hue-rotate(52deg) brightness(90%) contrast(90%);
+	        padding-right: 30px;
+	        padding-left: 30px;
+	        padding-top: 30px;
+	        padding-bottom: 30px;
+			/*visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.5s linear;*/
+	    }
+	    .imgcss:hover{
+	        filter: invert(22%) sepia(91%) saturate(324%) hue-rotate(52deg) brightness(102%) contrast(86%);
+	        -webkit-filter: invert(22%) sepia(91%) saturate(324%) hue-rotate(52deg) brightness(102%) contrast(86%);
+
+	    }
+
+	    .hover:hover{
+	        -webkit-filter: brightness(50%); /* Safari 6.0 - 9.0 */
+	        filter: brightness(50%);
+	    }
+	    .readmorediv {
+	        max-width: 500px;
+	        margin: auto;
+	        border: 3px solid #73AD21;
+
+	    }
+
+	    button {
+	        background-color: Transparent;
+	        background-repeat:no-repeat;
+	        border: none;
+	        cursor:pointer;
+	        overflow: hidden;
+	        outline:none;
+	    }
+
+	    #more{display: none}
+
+		#coolstuff {
+			font-family: 'Menlo Regular';
+			font-size: 20px
+
+		}
+
+		#headtxt {
+			font-family: 'Menlo Regular';
+			font-size: 50px;
+	        margin: 0;
+	        padding: 20px
+		}
+
+		#home-header {
+			position: relative;
+			transition:top 1s linear;
+			max-width: 550px;
+			left: 50%;
+			transform: translateX(-50%)
+		}
+
+		hr {
+	        width: auto;
+	        max-width: 450px
+	    }
+
+		.fadeable {
+			opacity: 0
+		}
+
+		#quote-author {
+			font-family: 'Menlo Regular';
+			font-size: 20px;
+			font-style: italic
+
+		}
+
+		background-color: #28292F!important;
+
+		.cts {
+			margin: 20px;
+			background-color: #70ad47;
+			color: #28292f;
+			border-radius: 8px;
+			font-size: 25px;
+			font-family: 'Menlo';
+			padding: 10px;
+			transition: 0.2s ease-in-out;
+			&:hover {
+				transition: 0.2s ease-in-out;
+				transform: translateY(-2px);
+			}
+		}
+}

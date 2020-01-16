@@ -5,138 +5,23 @@
     <title></will></title>
 </head>
 
-<link rel="stylesheet" href="assets/css/styles.css">
-<script src="assets/js/readmore.js"></script>
+<link rel="stylesheet" href="assets/css/will.compiled.css">
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
 <body>
 
+<div class="page" id="page1">
 <div id="home-header">
 <h1 id="headtxt"></h1>
 <p id="coolstuff"></p>
 <p id="quote-author"></p>
 
 </div>
-
-
-<script>
-
-var headtxt = '</will>';
-var v = 0;
-var x = 0;
-var a = 0;
-var txt = null;
-var txtauthor = null;
-var speed = 100;
-var letters1 = 0;
-
-
-$.getJSON('https://api.quotable.io/random', function(data) {
-  txt = data.content;
-  txtauthor = '- ' + data.author;
-  startLoadingStuff();
-})
-
-
-function startLoadingStuff() {
-	secondtypeWriter();
-}
-
-function secondtypeWriter() {
-  if (x < headtxt.length) {
-    document.getElementById("headtxt").innerHTML += headtxt.charAt(x);
-    x++;
-    setTimeout(secondtypeWriter, speed);
-  }
-	else if (x == headtxt.length) {
-		setTimeout(function(){ middletypeWriter();}, 500);
-
-	}
-}
-
-function middletypeWriter() {
-  if (a < txt.length) {
-    document.getElementById("coolstuff").innerHTML += txt.charAt(a);
-    a++;
-    setTimeout(middletypeWriter, speed);
-  }
-	else if (a == txt.length) {
-		setTimeout(function(){ typeWriter();}, 500);
-
-	}
-}
-
-function typeWriter() {
-  if (v < txtauthor.length) {
-    document.getElementById("quote-author").innerHTML += txtauthor.charAt(v);
-    v++;
-    setTimeout(typeWriter, speed);
-  }
-  else if (v == txtauthor.length) {
-	loadAfterQuotes();
-
-  }
-
-}
-
-function loadAfterQuotes() {
-
-    setTimeout(function(){
-    $('html, body').animate({
-        scrollTop: $("#homeimages").offset().top
-    }, 2000);
-    $(".fadeable").each(function(index) {
-    $(this).delay(400*index).animate({opacity: 1}, 1000);
-	});}, 1500);
-}
-
-var d = document.getElementsByClassName("imgcss");
-
-
-
-
-function setHomeToMiddle() {
-	var middle = document.getElementById('home-header').style;
-	var willtxt = document.getElementById('headtxt').style;
-	var coolstufftxt = document.getElementById('coolstuff').style;
-
-	middle.margin = '0';
-	middle.position = 'absolute';
-	middle.top = '50%';
-	middle.left = '50%';
-	middle.marginRight = '-50%';
-	middle.transform = 'translate(-50%, -50%)';
-
-	willtxt.fontSize = '80px';
-	coolstufftxt.fontSize = '30px';
-
-}
-
-function removeHomeToMiddle() {
-	var middle = document.getElementById('home-header').style;
-	var willtxt = document.getElementById('headtxt').style;
-	var coolstufftxt = document.getElementById('coolstuff').style;
-
-	middle.transition = 'top 1s linear';
-	middle.margin = 'initial';
-	middle.position = 'initial';
-	middle.top = 'initial';
-	middle.left = 'initial';
-	middle.marginRight = 'initial';
-	middle.transform = 'initial';
-
-	willtxt.fontSize = '50px';
-	coolstufftxt.fontSize = '20px';
-
-
-}
-
-
-</script>
 
 
 <div id="homeimages" style="">
@@ -148,10 +33,10 @@ function removeHomeToMiddle() {
 
 <!--
 <a href="https://facebook.com/william.pakpoy" target="_blank">
-<img src="assets/svg/apps-facebook.svg" alt="Facebook" width="100" class="imgcss"></a>
--->
+<img src="assets/svg/apps-facebook.svg" alt="Facebook" width="100" class="imgcss fadeable"></a>
 
-<a href="https://en.uncyclopedia.co/wiki/This_page_does_NOT_exist" target="_blank">
+-->
+<a href="https://twitter.com/willpakpoy" target="_blank">
 <img src="assets/svg/apps-twitter.svg" alt="Twitter" width="100" class="imgcss fadeable"></a>
 
 <br>
@@ -162,20 +47,41 @@ function removeHomeToMiddle() {
 <a href="https://github.com/pakkie64" target="_blank">
 <img src="assets/svg/apps-github.svg" alt="Github" width="100" class="imgcss fadeable"></a>
 
+<!--
+
+<a href="https://open.spotify.com/user/willeoso" target="_blank">
+<img src="assets/svg/apps-spotify.svg" alt="Github" width="100" class="imgcss fadeable"></a>
+-->
 
 <br>
 </div>
-<button onclick="myFunction()" id="myBtn" class="readmore hover morebutton fadeable">Read more</button>
+<button onclick="loadMore()" class="cts fadeable">Continue</button>
+</div>
 
 
-<span id="dots"></span><span id="more"><br><br>
-<!-- Below this line is what appears when you press the "Read More" button -->
+<div class="page" id="page2">
+    <header>
+        <h1 class="title">Will Pak Poy</h1>
+        <button class="navbutton" onclick="s2page('#home')">Home</button>
+        <button class="navbutton" onclick="s2page('#about')">About</button>
+        <button class="navbutton" onclick="s2page('#contact')">Contact</button>
+        <!--<button class="navbutton" style="justify-content: flex-end" onclick="localtion.reload">↑ Back to Socials</button>-->
+    </header>
+
+    <div class="s2page s2active" id="home">
+        <h1>Home Page</h1>
+    </div>
+
+    <div class="s2page" id="about">
+        <h1>About Page</h1>
+    </div>
+
+    <div class="s2page" id="contact">
+        <h1>Contact Page</h1>
+    </div>
 
 
-<span class="textbody">
-<p>This is where my biography will go. I am just not bothered to write one.</p>
-<p>If you would like to write one for me, that would be great.</p>
-</span>
+</div>
 
 
 </span>
@@ -184,4 +90,6 @@ function removeHomeToMiddle() {
 
 
 </body>
+<script src="assets/js/index.js"></script>
+
 </html>
