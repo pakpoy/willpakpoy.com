@@ -17,13 +17,12 @@ export default {
 <style scoped>
 .a-social {
   display: flex;
-  padding: 12px;
   transition: 0.2s ease-in-out;
 }
 
 img {
-  height: 40px;
-  width: 40px;
+  height: 100%;
+  width: 100%;
   filter: invert(1);
 }
 

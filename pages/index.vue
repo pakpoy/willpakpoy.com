@@ -25,7 +25,7 @@
       />
       <Social
         name="github"
-        image="https://www.flaticon.com/svg/static/icons/svg/2111/2111425.svg"
+        image="https://www.flaticon.com/svg/static/icons/svg/25/25231.svg"
         url="https://github.com/willpakpoy"
       />
       <Social
@@ -41,20 +41,32 @@
 export default {}
 </script>
 
-<style scoped>
-.container {
-  height: calc(100vh - 20px);
-  width: calc(100vw - 20px);
-  background-color: #002147;
+<style>
+body {
+  height: calc(100vh - 40px);
+  width: calc(100vw - 40px);
+  background: linear-gradient(
+    135deg,
+    rgba(54, 76, 119, 1) 0%,
+    rgba(0, 0, 36, 1) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
   overflow: hidden;
 
   color: #ffffff;
   font-family: Poppins;
+}
+
+.container {
+  max-width: 325px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 h1,
@@ -68,6 +80,9 @@ h1 {
 }
 
 .socials {
-  display: flex;
+  display: grid;
+  padding-top: 6px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 16px;
 }
 </style>
