@@ -1,6 +1,10 @@
 <template>
   <a class="a-social" :href="url" target="_BLANK">
-    <img :alt="name" :src="image" />
+    <svg class="icon">
+      <use
+        v-bind="{ 'xlink:href': require('~/assets/iconsprite.svg') + sprite }"
+      />
+    </svg>
   </a>
 </template>
 
@@ -10,6 +14,7 @@ export default {
     name: String,
     image: String,
     url: String,
+    sprite: String,
   },
 }
 </script>
@@ -18,12 +23,14 @@ export default {
 .a-social {
   display: flex;
   transition: 0.2s ease-in-out;
+  height: 50px;
 }
 
-img {
+.icon {
   height: 100%;
   width: 100%;
   filter: invert(1);
+  display: block;
 }
 
 .a-social:hover {

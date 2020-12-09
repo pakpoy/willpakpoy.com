@@ -6,31 +6,37 @@
       <social
         name="instagram"
         :image="require(`~/assets/icons/instagram.svg`)"
+        sprite="#instagram"
         url="https://instagram.com/willpakpoy"
       />
       <social
         name="twitter"
         :image="require(`~/assets/icons/twitter.svg`)"
+        sprite="#twitter"
         url="https://twitter.com/willpakpoy"
       />
       <social
         name="facebook"
         :image="require(`~/assets/icons/facebook.svg`)"
+        sprite="#facebook"
         url="https://facebook.com/willpakpoy"
       />
       <social
         name="spotify"
         :image="require(`~/assets/icons/spotify.svg`)"
+        sprite="#spotify"
         url="https://open.spotify.com/user/willeoso"
       />
       <social
         name="github"
         :image="require(`~/assets/icons/github.svg`)"
+        sprite="#github"
         url="https://github.com/willpakpoy"
       />
       <social
         name="snapchat"
         :image="require(`~/assets/icons/snapchat.svg`)"
+        sprite="#snapchat"
         url="https://snapchat.com/add/willthe3rd1990"
       />
     </div>
@@ -83,6 +89,7 @@ h1 {
   display: grid;
   padding-top: 6px;
   grid-template-columns: repeat(6, 1fr);
+  max-height: 42px;
   grid-gap: 16px;
 }
 </style>
