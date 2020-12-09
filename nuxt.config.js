@@ -14,8 +14,8 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Poppins:wght@900'
-      }
+        href: 'https://fonts.googleapis.com/css?family=Poppins:wght@900',
+      },
     ],
   },
 
@@ -48,6 +48,11 @@ export default {
   build: {},
 
   googleAnalytics: {
-    id: 'G-PGEJ6ZCNVX'
-  }
+    id: 'G-PGEJ6ZCNVX',
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: 'G-PGEJ6ZCNVX',
+    },
+  },
 }
