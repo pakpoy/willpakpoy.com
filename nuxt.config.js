@@ -33,6 +33,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-analytics',
+    '@nuxtjs/fontawesome',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -53,6 +54,12 @@ export default {
   publicRuntimeConfig: {
     googleAnalytics: {
       id: 'G-PGEJ6ZCNVX',
+    },
+  },
+
+  fontawesome: {
+    icons: {
+      brands: ['faInstagram'],
     },
   },
 }

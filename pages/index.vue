@@ -3,33 +3,33 @@
     <h3>hey, i'm</h3>
     <h1>will pak poy</h1>
     <div class="socials">
-      <Social
+      <social
         name="instagram"
         image="https://www.flaticon.com/svg/static/icons/svg/1384/1384031.svg"
         url="https://instagram.com/willpakpoy"
       />
-      <Social
+      <social
         name="twitter"
         image="https://www.flaticon.com/svg/static/icons/svg/733/733635.svg"
         url="https://twitter.com/willpakpoy"
       />
-      <Social
+      <social
         name="facebook"
         image="https://www.flaticon.com/svg/static/icons/svg/1384/1384005.svg"
         url="https://facebook.com/willpakpoy"
       />
-      <Social
+      <social
         name="spotify"
         image="https://www.flaticon.com/svg/static/icons/svg/2111/2111685.svg"
         url="https://open.spotify.com/user/willeoso"
       />
-      <Social
+      <social
         name="github"
         image="https://www.flaticon.com/svg/static/icons/svg/25/25231.svg"
         url="https://github.com/willpakpoy"
       />
-      <Social
-        name="github"
+      <social
+        name="snapchat"
         image="https://www.flaticon.com/svg/static/icons/svg/733/733627.svg"
         url="https://snapchat.com/add/willthe3rd1990"
       />
