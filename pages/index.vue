@@ -19,7 +19,7 @@
         name="facebook"
         :image="require(`~/assets/icons/facebook.svg`)"
         sprite="#facebook"
-        url="https://facebook.com/willpakpoy"
+        url="https://facebook.com/william.pakpoy"
       />
       <social
         name="spotify"
