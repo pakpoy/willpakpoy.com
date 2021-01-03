@@ -1,7 +1,6 @@
 <template>
   <div class="container">
-    <h3>hey, i'm</h3>
-    <h1>will pak poy</h1>
+    <h2>hey, i'm<br /><span>will pak poy</span></h2>
     <div class="socials">
       <social
         name="instagram"
@@ -47,7 +46,7 @@
 export default {}
 </script>
 
-<style>
+<style lang="scss">
 body {
   height: calc(100vh - 40px);
   width: calc(100vw - 40px);
@@ -75,14 +74,12 @@ body {
   flex-direction: column;
 }
 
-h1,
-h3 {
+h2 {
   margin: 0px;
-  font-weight: 900;
-}
-
-h1 {
-  font-size: 50px;
+  text-align: center;
+  span {
+    font-size: 50px;
+  }
 }
 
 .socials {
