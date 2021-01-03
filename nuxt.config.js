@@ -54,6 +54,7 @@ export default {
   publicRuntimeConfig: {
     googleAnalytics: {
       id: 'G-PGEJ6ZCNVX',
+      debug: { sendHitTask: true },
     },
   },
 
