@@ -8,11 +8,12 @@ export default (ctx, inject) => {
     debug: {
       enabled: false,
       trace: false,
-      sendHitTask: process.env.NODE_ENV === 'production',
+      sendHitTask: true,
     },
     router: ctx.app.router,
   })
 
   ctx.$ga = Vue.$ga
   inject('ga', Vue.$ga)
+  console.log('GA - RUNNING')
 }
