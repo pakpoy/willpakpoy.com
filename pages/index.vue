@@ -47,9 +47,12 @@ export default {}
 </script>
 
 <style lang="scss">
+* {
+  box-sizing: border-box;
+}
 body {
-  height: calc(100vh - 40px);
-  width: calc(100vw - 40px);
+  height: 100vh;
+  width: 100vw;
   background: linear-gradient(
     135deg,
     rgba(54, 76, 119, 1) 0%,
