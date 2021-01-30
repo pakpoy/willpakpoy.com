@@ -3,7 +3,7 @@ import VueAnalytics from 'vue-analytics'
 
 export default (ctx, inject) => {
   Vue.use(VueAnalytics, {
-    id: 'G-PGEJ6ZCNVX',
+    id: 'G-RVCE38B652S',
     checkDuplicatedScript: true,
     debug: {
       enabled: false,
@@ -15,5 +15,4 @@ export default (ctx, inject) => {
 
   ctx.$ga = Vue.$ga
   inject('ga', Vue.$ga)
-  console.log('GA - RUNNING')
 }
