@@ -23,9 +23,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [
-    '~/plugins/vueAnalytics.js'
-  ],
+  plugins: ['~/plugins/vueAnalytics.js'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,

@@ -39,6 +39,17 @@
         url="https://snapchat.com/add/willthe3rd1990"
       />
     </div>
+    <p>
+      <a href="mailto:will@willpakpoy.com"
+        ><svg class="icon">
+          <use
+            v-bind="{
+              'xlink:href': require('~/assets/iconsprite.svg') + '#email',
+            }"
+          /></svg
+        >will@willpakpoy.com</a
+      >
+    </p>
   </div>
 </template>
 
@@ -91,5 +102,29 @@ h2 {
   grid-template-columns: repeat(6, 1fr);
   max-height: 42px;
   grid-gap: 16px;
+  margin-bottom: 1.5em;
+}
+
+p {
+  font-size: 1.5em;
+  color: #fff;
+  padding-top: 1em;
+  border-top: 2px solid #fff;
+  a {
+    color: #fff;
+    display: inline-flex;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      transform: rotate(2deg) scale(1.1);
+      transition: 0.2s ease-in-out;
+    }
+    .icon {
+      height: 1.5em;
+      width: 1.5em;
+      padding-right: 0.5em;
+      filter: invert(1);
+    }
+  }
 }
 </style>
