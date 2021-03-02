@@ -40,14 +40,14 @@
       />
     </div>
     <p>
-      <a href="mailto:will@willpakpoy.com"
+      <a href="mailto:hey@willpakpoy.com"
         ><svg class="icon">
           <use
             v-bind="{
               'xlink:href': require('~/assets/iconsprite.svg') + '#email',
             }"
           /></svg
-        >will@willpakpoy.com</a
+        >hey@willpakpoy.com</a
       >
     </p>
   </div>
