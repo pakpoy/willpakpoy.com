@@ -1,0 +1,29 @@
+{
+  "name": "willpakpoy.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel serve ./src/index.html",
+    "generate": "parcel build ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willpakpoy/willpakpoy.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willpakpoy/willpakpoy.com/issues"
+  },
+  "homepage": "https://github.com/willpakpoy/willpakpoy.com#readme",
+  "dependencies": {
+    "parcel": "^2.0.0-beta.1",
+    "posthtml-include": "^1.6.2"
+  },
+  "devDependencies": {
+    "@parcel/transformer-inline-string": "^2.0.0-alpha.3",
+    "@parcel/transformer-sass": "2.0.0-nightly.620"
+  }
+}
