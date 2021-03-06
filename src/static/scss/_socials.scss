@@ -1,0 +1,24 @@
+.socials /* socials grid */ {
+    display: grid;
+    padding-top: 6px;
+    grid-template-columns: repeat(6, 1fr);
+    max-height: 42px;
+    grid-gap: 16px;
+    margin-bottom: 1.5em;
+
+    .a-social {
+        display: flex;
+        transition: 0.2s ease-in-out;
+        height: 50px;
+        .icon {
+            height: 100%;
+            width: 100%;
+            filter: invert(1);
+            display: block;
+        }
+        &:hover {
+            transform: rotate(10deg) scale(1.1);
+            transition: 0.2s ease-in-out;
+        }
+    }
+}
