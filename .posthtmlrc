@@ -1,4 +1,6 @@
 {
+  "recognizeSelfClosing": true,
+  "lowerCaseAttributeNames": false,
   "plugins": {
     "posthtml-include": {}
   }
