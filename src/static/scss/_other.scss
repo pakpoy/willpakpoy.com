@@ -1,0 +1,13 @@
+a.toBlog {
+    text-decoration: none;
+    background: linear-gradient(135deg,#ec6455,#f5af19);
+    color: #fff;
+    padding: 11px;
+    border-radius: 6px;
+    box-shadow: 0 0 20px 0 #00000030;
+    transition: 0.2s ease-in-out;
+    &:hover {
+        transform: scale(1.05);
+        transition: 0.2s ease-in-out;
+    }
+}
