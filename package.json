@@ -2,7 +2,7 @@
   "name": "willpakpoy.com",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "dist/index.html",
   "scripts": {
     "start": "parcel serve ./src/index.html",
     "generate": "parcel build ./src/index.html"
