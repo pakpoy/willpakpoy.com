@@ -1,42 +1,36 @@
+@import url('https://rsms.me/inter/inter.css');
+
+:root {
+    --size-a-social: 2em;
+}
+
 * {
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 body {
-    margin: 0px;
+    background-color: #333;
+    font-family: "inter var";
+    margin: 2em;
+    color: #fff;
+}
 
-    height: 100vh;
-    width: 100vw;
+h1 {
+    margin: 0;
+    font-size: 3em;
 
-    background: linear-gradient(135deg, #1A2980 0%, #26D0CE 100%);
+    letter-spacing: -0.055em;
+    //line-height: 0.9em;
+    text-indent: -0.03em;
+    font-weight: 740;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    padding: 20px;
-    overflow: hidden;
-  
-    color: #ffffff;
-    font-family: Poppins, sans-serif;
-
-    main {
-        max-width: 325px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-        h2 /* hey */{
-            margin: 0px;
-            text-align: center;
-            span {
-              font-size: 50px;
-            }
-        }
-        @import "./socials";
+.socials {
+    .a-social svg {
+        width: var(--size-a-social);
+        height: var(--size-a-social);
     }
-
-    @import "./other";
-  }
+}
+#iconsprite {
+    display: none;
+}
