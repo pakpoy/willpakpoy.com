@@ -20,10 +20,10 @@
   "homepage": "https://github.com/willpakpoy/willpakpoy.com#readme",
   "dependencies": {
     "parcel": "^2.0.0-beta.1",
-    "posthtml-include": "^1.6.2"
+    "posthtml-include": "^1.6.2",
+    "@parcel/transformer-sass": "2.0.0-beta.2"
+
   },
   "devDependencies": {
-    "@parcel/transformer-inline-string": "^2.0.0-alpha.3",
-    "@parcel/transformer-sass": "2.0.0-nightly.620"
   }
 }
