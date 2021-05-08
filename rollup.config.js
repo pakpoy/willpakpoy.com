@@ -11,7 +11,7 @@ import include from "posthtml-include";
 export default {
     input: "src/main.js",
     output: {
-        file: path.resolve("build/static/build/main.js"),
+        file: path.resolve("dist/static/build/main.js"),
         format: "iife",
         name: "bundle",
     },
@@ -26,7 +26,7 @@ export default {
         }),
         postcss({
             // Or with custom file name, it will generate file relative to bundle.js in v3
-            extract: path.resolve("build/static/build/styles.css"),
+            extract: path.resolve("dist/static/build/styles.css"),
         }),
         replace({
             "process.env.NODE_ENV": JSON.stringify("development"),
@@ -35,7 +35,7 @@ export default {
             babelHelpers: "bundled",
         }),
         copy({
-            targets: [{ src: "src/static/assets", dest: "build/static" }],
+            targets: [{ src: "src/static/assets", dest: "dist/static" }],
         }),
     ],
 };
