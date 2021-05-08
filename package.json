@@ -8,7 +8,8 @@
     "dev:server": "npx browser-sync build -w",
     "build:rollup": "npx rollup -c",
     "build": "npm-run-all build:*",
-    "start": "npm-run-all build:* -p dev:* "
+    "start": "npm-run-all build:* -p dev:* ",
+    "generate": "npm run build"
   },
   "repository": {
     "type": "git",
