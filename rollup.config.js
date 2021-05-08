@@ -6,6 +6,8 @@ import replace from "rollup-plugin-replace";
 import copy from "rollup-plugin-copy";
 import posthtml from "rollup-plugin-posthtml-multi";
 import include from "posthtml-include";
+import modules from "posthtml-modules";
+import inlineAssets from "posthtml-inline-assets";
 //import alias from 'rollup-plugin-alias';
 
 export default {
@@ -17,13 +19,7 @@ export default {
     },
     plugins: [
         nodeResolve(),
-        posthtml({
-            watch: false,
-            options: {
-                extract: "../..",
-                plugins: [include({ encoding: "utf8" })],
-            },
-        }),
+        
         postcss({
             // Or with custom file name, it will generate file relative to bundle.js in v3
             extract: path.resolve("dist/static/build/styles.css"),
@@ -36,6 +32,13 @@ export default {
         }),
         copy({
             targets: [{ src: "src/static/assets", dest: "dist/static" }],
+        }),
+        posthtml({
+            watch: false,
+            options: {
+                extract: "../..",
+                plugins: [include({ encoding: "utf8" }), modules(), inlineAssets()],
+            },
         }),
     ],
 };

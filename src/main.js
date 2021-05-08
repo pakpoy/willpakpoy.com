@@ -1,2 +1,2 @@
-export { default as index } from './index.html';
-import "./static/scss/universal.scss";
+import style from  "./static/scss/universal.scss";
+export { default as html } from './index.html';

@@ -5,7 +5,7 @@
   "main": "dist/index.html",
   "scripts": {
     "dev:rollup": "npx rollup -c --watch",
-    "dev:server": "npx browser-sync build -w",
+    "dev:server": "npx browser-sync dist -w",
     "build:rollup": "npx rollup -c",
     "build": "npm-run-all build:*",
     "start": "npm-run-all build:* -p dev:* ",
@@ -38,6 +38,9 @@
     "@rollup/plugin-html": "^0.2.3",
     "node-sass": "^5.0.0",
     "posthtml-include": "^1.7.1",
+    "posthtml-inline-assets": "^3.1.0",
+    "posthtml-inline-css": "^1.2.3",
+    "posthtml-modules": "^0.7.4",
     "posthtml-sugarml": "^1.0.0-alpha3",
     "rollup-plugin-posthtml": "^1.0.1",
     "rollup-plugin-posthtml-multi": "^0.1.0"
