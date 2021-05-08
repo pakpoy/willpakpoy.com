@@ -92,3 +92,5 @@ sw.*
 *.lock
 
 .parcel-cache/
+
+build/
