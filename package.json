@@ -36,6 +36,7 @@
   "dependencies": {
     "@babel/core": "^7.14.0",
     "@rollup/plugin-html": "^0.2.3",
+    "node-sass": "^5.0.0",
     "posthtml-include": "^1.7.1",
     "posthtml-sugarml": "^1.0.0-alpha3",
     "rollup-plugin-posthtml": "^1.0.1",
