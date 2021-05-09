@@ -22,13 +22,12 @@
             height: 1.3em;
             margin-right: 0.5em;
         }
+        &.blog {
+            background: linear-gradient(135deg,#ec6455,#f5af19);
+        }
+        &.keybase {
+            background-color: #196eff;
+            color: #fff;
+        }
     }
-
-    .blog {
-        background: linear-gradient(135deg,#ec6455,#f5af19);
-    }
-    .keybase {
-        background-color: #196eff
-    }
-    
 }
