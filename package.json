@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "astro dev",
-    "build": "astro build"
+    "build": "astro build",
+    "generate": "yarn build"
   },
   "devDependencies": {
     "astro": "^0.17.2"
