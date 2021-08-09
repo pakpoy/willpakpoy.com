@@ -31,7 +31,10 @@ export default {
             babelHelpers: "bundled",
         }),
         copy({
-            targets: [{ src: "src/static/assets", dest: "dist/static" }],
+            targets: [
+                { src: "src/static/assets", dest: "dist/static" },
+                { src: "src/static/public-root/*", dest: "dist" },
+            ],
         }),
         posthtml({
             watch: false,
