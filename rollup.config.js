@@ -8,6 +8,7 @@ import posthtml from "rollup-plugin-posthtml-multi";
 import include from "posthtml-include";
 import modules from "posthtml-modules";
 import inlineAssets from "posthtml-inline-assets";
+import htmlnano from "htmlnano";
 //import alias from 'rollup-plugin-alias';
 
 export default {
@@ -19,7 +20,6 @@ export default {
     },
     plugins: [
         nodeResolve(),
-        
         postcss({
             // Or with custom file name, it will generate file relative to bundle.js in v3
             extract: path.resolve("dist/static/build/styles.css"),
@@ -40,7 +40,15 @@ export default {
             watch: false,
             options: {
                 extract: "../..",
-                plugins: [include({ encoding: "utf8" }), modules(), inlineAssets()],
+                plugins: [
+                    include({ encoding: "utf8" }),
+                    modules(),
+                    inlineAssets(),
+                    htmlnano({
+                        minifySvg: false,
+                        removeComments: true
+                    })
+                ],
             },
         }),
     ],

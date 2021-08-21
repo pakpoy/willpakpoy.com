@@ -2,6 +2,9 @@
   "recognizeSelfClosing": true,
   "lowerCaseAttributeNames": false,
   "plugins": {
-    "posthtml-include": {}
+    "posthtml-include": {},
+    "htmlnano":{
+      removeComments: true
+    }
   }
 }
