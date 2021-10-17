@@ -1,7 +1,53 @@
 ---
-import Base from "../layouts/Base.astro"
+import BaseLayout from "../layouts/Base.astro"
 ---
 
-<Base>
-    <h1>Hello</h1>
-</Base>
+<BaseLayout title="Will Pak Poy">
+    <div class="homepage">
+        <h1>
+            <span class="text hi">Hi, I'm</span>
+            <span class="text me">Will Pak Poy</span>
+            <span class="text it">That's about it, really.</span>
+        </h1>
+    </div>
+</BaseLayout>
+
+<style lang="scss">
+.homepage {
+    @media only screen and (min-width: 600px) {
+        margin: 6em;
+        --font-scaling: 2;
+    }
+    @media only screen and (max-width: 599px) {
+        margin: 2.4em;
+        --font-scaling: 1.2;
+    }
+    .text {
+        display: block;
+        letter-spacing: -0.055em;
+        line-height: 0.9em;
+        text-index: 0.03em;
+
+        &.me {
+            margin-top: 4px;
+            font-size: calc(var(--font-scaling) * 40px);
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: calc(var(--font-scaling) * 30px);
+                height: calc(var(--font-scaling) * 30px);
+                background: linear-gradient(135deg, #1A2980 0%, #26D0CE 100%);
+                border-radius: 50%;
+                margin-left: 4px;
+            }
+        }
+
+        &.it {
+            margin-top: 1.2em;
+        }
+    }
+}
+
+
+</style>
