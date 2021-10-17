@@ -6,7 +6,7 @@ import BaseLayout from "../layouts/Base.astro"
     <div class="homepage">
         <h1>
             <span class="text hi">Hi, I'm </span>
-            <span class="text me">Will Pak Poy</span>
+            <span class="text me">Will Pak Poy.</span>
             <span class="text it">That's about it, really.</span>
         </h1>
     </div>
@@ -20,7 +20,7 @@ import BaseLayout from "../layouts/Base.astro"
     }
     @media only screen and (max-width: 599px) {
         margin: 2.4em;
-        --font-scaling: 1.2;
+        --font-scaling: 1.1;
     }
     .text {
         display: block;
@@ -43,7 +43,9 @@ import BaseLayout from "../layouts/Base.astro"
                 border-radius: 50%;
             }
         }
-
+        &.it, &.hi {
+            font-size: calc(var(--font-scaling) * 20px);
+        }
         &.it {
             margin-top: 1.2em;
         }
