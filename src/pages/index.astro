@@ -31,6 +31,8 @@ import BaseLayout from "../layouts/Base.astro"
         &.me {
             margin-top: 4px;
             font-size: calc(var(--font-scaling) * 40px);
+            display: flex;
+            align-items: center;
 
             &::before {
                 content: "";
@@ -39,7 +41,6 @@ import BaseLayout from "../layouts/Base.astro"
                 height: calc(var(--font-scaling) * 30px);
                 background: linear-gradient(135deg, #1A2980 0%, #26D0CE 100%);
                 border-radius: 50%;
-                margin-left: 4px;
             }
         }
 
