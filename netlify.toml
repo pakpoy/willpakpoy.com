@@ -1,5 +1,5 @@
 [build]
-    command = "chmod a+x ./netlify && ./netlify.sh"
+    command = "chmod a+x ./netlify.sh && ./netlify.sh"
 [build.environment]
   NODE_VERSION = "16"
   NPM_FLAGS = "--version" # prevent Netlify npm install
