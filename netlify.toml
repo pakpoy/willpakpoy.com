@@ -1,5 +1,5 @@
 [build]
-    command = "bash ./netlify.sh"
+    command = "./netlify.sh"
 [build.environment]
   NODE_VERSION = "16"
   NPM_FLAGS = "--version" # prevent Netlify npm install
