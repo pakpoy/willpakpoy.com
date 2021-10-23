@@ -1,5 +1,6 @@
 ---
-import BaseLayout from "../layouts/Base.astro"
+import BaseLayout from "../layouts/Base.astro";
+import Bitmoji from "../components/Bitmoji.vue";
 ---
 
 <BaseLayout title="willpakpoy.com" description="will's super cool website you should totally check it out">
@@ -9,6 +10,7 @@ import BaseLayout from "../layouts/Base.astro"
             <span class="text me">Will Pak Poy. </span>
             <span class="text it">That's about it, really.</span>
         </h1>
+            <Bitmoji client:load />
     </div>
 </BaseLayout>
 
@@ -21,10 +23,21 @@ body {
     @media only screen and (min-width: 700px) {
         margin: 6em;
         --font-scaling: 2;
+        :global(.bitmoji) {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            height: 65vh;
+        }
     }
     @media only screen and (max-width: 699px) {
         margin: 2.4em;
         --font-scaling: 1.1;
+        :global(.bitmoji) {
+            position: fixed;
+            bottom: 0px;
+            width: 100vw;
+        }
     }
     .text {
         display: block;
@@ -55,6 +68,4 @@ body {
         }
     }
 }
-
-
 </style>

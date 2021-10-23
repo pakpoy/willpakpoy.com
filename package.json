@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "astro": "^0.20.12"
+  },
+  "dependencies": {
+    "@astrojs/renderer-vue": "^0.1.9",
+    "libmoji": "^2.3.0"
   }
 }
