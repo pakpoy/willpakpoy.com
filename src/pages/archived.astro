@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../layouts/Base.astro";
+---
+
+<BaseLayout title="site archived" description="this has been archived :(">
+    <div>
+      <img src="assets/archive.svg">
+      <h1>Archived.</h1>
+      <p>Source code available on <a href="https://github.com/willpakpoy">GitHub</a>.</p>
+    </div>
+</BaseLayout>
+
+<style lang="scss">
+html {
+  height: 100%;
+}
+body {
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-bottom: 10vh;
+}
+h1 {
+  display: block;
+  letter-spacing: -0.055em;
+  line-height: 0.9em;
+  text-index: 0.03em;
+  font-size: 5em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+img {
+  filter: invert(1);
+}
+
+a {
+  color: #fff;
+}
+</style>
