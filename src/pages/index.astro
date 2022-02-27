@@ -1,15 +1,23 @@
 ---
 import BaseLayout from "../layouts/Base.astro";
 import Bitmoji from "../components/Bitmoji.vue";
+import gsap from "gsap";
 ---
-
 <BaseLayout title="willpakpoy.com" description="will's super cool website you should totally check it out">
+<script>console.log(gsap)</script>
     <div class="homepage">
         <h1>
             <span class="text hi">Hi, I'm </span>
             <span class="text me">Will Pak Poy. </span>
-            <span class="text it">That's about it, really.</span>
+            <!--<span class="text it">That's about it, really.</span>-->
+            
         </h1>
+        <div class="links">
+                <a class="link twitter" href="https://pakman.me/socials/twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                    @willpakpoy
+                </a>
+        </div>
     </div>
 </BaseLayout>
 
@@ -66,6 +74,23 @@ body {
         }
         &.it {
             margin-top: 1.2em;
+        }
+    }
+    .links {
+        display: flex;
+        gap: 1em;
+        margin-top: 1.2em;
+        .link {
+            border-radius: 6px;
+            box-shadow: 0 0 20px 0 #00000030;
+            padding: 11px;
+            font-size: calc(var(--font-scaling) * 12px);
+            color: #fff;
+            text-decoration: none;
+            background-color: grey;
+            &.twitter {
+                background-color: #1DA1F2
+            }
         }
     }
 }

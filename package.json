@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@astrojs/renderer-vue": "^0.1.9",
+    "gsap": "^3.9.1",
     "libmoji": "^2.3.0"
   }
 }
