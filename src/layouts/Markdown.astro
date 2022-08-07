@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/Base.astro";
+const { content } = Astro.props;
+---
+<BaseLayout title="willpakpoy.com" description="will's super cool website you should totally check it out">
+  <main>
+    <slot/>
+  </main>
+</BaseLayout>
+
+<style lang="scss">
+:global(h1), :global(h2), :gblobal(h3), :global(h4) {
+  font-family: "Inter Display";
+}
+:global(h1){
+    font-size: 6em;
+    letter-spacing: -.055em;
+}
+</style>
