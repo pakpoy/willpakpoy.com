@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/Base.astro";
+---
+
+<BaseLayout title="will's vlog" description="watch wills vlog here">
+  <iframe src="https://www.youtube.com/embed/ERZZgPhd9K0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <div class="top-left">
+    <p>will's vlog</p>
+    <a href="/">↖ back to willpakpoy.com</a>
+  </div>
+</BaseLayout>
+
+<style lang="scss">
+html {
+  height: 100%;
+}
+body {
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+iframe {
+  height: 80vh;
+  width: 80vw;
+  aspect-ratio: 16 / 9;
+}
+
+div.top-left {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+}
+a {
+  color: inherit;
+  font-style: italic;
+}
+
+p {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+</style>
