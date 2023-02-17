@@ -1,0 +1,8 @@
+---
+import BaseLayout from "../layouts/Base.astro";
+import Photos from "../components/Photos.vue";
+---
+
+<BaseLayout title="Will's Perpetual Camera Roll" description="view all the photos i've taken recently">
+  <Photos client:load/>
+</BaseLayout>

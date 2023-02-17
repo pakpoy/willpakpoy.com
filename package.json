@@ -8,12 +8,14 @@
     "build": "astro build",
     "preview": "astro preview"
   },
-  "devDependencies": {
-    "astro": "^0.20.12"
-  },
   "dependencies": {
-    "@astrojs/renderer-vue": "^0.1.9",
+    "@astrojs/vue": "^2.0.1",
+    "astro": "^2.0.13",
+    "crypto-js": "^4.1.1",
     "gsap": "^3.9.1",
-    "libmoji": "^2.3.0"
+    "libmoji": "^2.3.0",
+    "prettier": "^2.8.4",
+    "prettier-plugin-astro": "^0.8.0",
+    "vue": "^3.2.47"
   }
 }
