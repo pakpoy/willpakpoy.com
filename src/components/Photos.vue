@@ -4,10 +4,10 @@
       <div class="show-password" v-if="!showFrame">
         <h1>Will's Perpetual<br>Camera Roll</h1>
         <p class="html-tag">enter password to continue</p>
-        <input type="password" v-model="decryptionKey" @keyup.enter="decrypt()">
+        <input type="password" v-model="decryptionKey" @keyup.enter="decrypt()" placeholder="password">
       </div>
       <div class="show-photos" v-else-if="showFrame">
-        <p class="html-tag">You're in!.</p>
+        <p class="html-tag">You're in!</p>
       </div></Transition>
   </div>
 </template>
@@ -54,7 +54,7 @@ export default {
   box-sizing: border-box;
 }
 
-.html-tag {
+.html-tag, input {
   opacity: 0.5;
   font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace
 }
