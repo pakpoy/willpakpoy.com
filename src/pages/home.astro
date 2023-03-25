@@ -1,0 +1,139 @@
+---
+import BaseLayout from "../layouts/Base.astro";
+import Bitmoji from "../components/Bitmoji.vue";
+---
+<BaseLayout title="willpakpoy.com" description="will's super cool website you should totally check it out">
+    <div class="homepage">
+        <!--<h1>
+            <span class="text hi">Hi, I'm </span>
+            <span class="text me">Will Pak Poy. </span>
+            <span class="text it">That's about it, really.</span>
+            
+        </h1>-->
+        <h1 class="text hi">hi, im will.</h1>
+        <p class="html-tag">&lt;socials&gt;</p>
+        <div class="links">
+                <a class="link twitter" href="https://pakman.me/socials/twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                    willpakpoy
+                </a>
+                <a class="link instagram" href="https://pakman.me/socials/instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    willpakpoy
+                </a>
+                <a class="link spotify" href="https://pakman.me/socials/spotify">
+                    <i class="fa-brands fa-spotify"></i>
+                    will
+                </a>
+                <a class="link github" href="https://pakman.me/socials/github">
+                    <i class="fa-brands fa-github"></i>
+                    pakpoy
+                </a>
+                <a class="link pinterest" href="https://pakman.me/socials/pinterest">
+                    <i class="fa-brands fa-pinterest"></i>
+                    willpakpoy
+                </a>
+        </div>
+        <p class="html-tag">&lt;/socials&gt;</p>
+        <br>
+    </div>
+</BaseLayout>
+
+<style lang="scss">
+body {
+    margin: 0;
+}
+.homepage {
+    margin-bottom: 0;
+    @media only screen and (min-width: 700px) {
+        margin: 6em;
+        --font-scaling: 2;
+        max-width: 600px;
+        :global(.bitmoji) {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            height: 65vh;
+        }
+    }
+    @media only screen and (max-width: 699px) {
+        margin: 2.4em;
+        --font-scaling: 1.3;
+        :global(.bitmoji) {
+            position: fixed;
+            bottom: 0px;
+            width: 100vw;
+            left: 0px;
+            right: 0px;
+        }
+    }
+    .text {
+        display: block;
+        letter-spacing: -0.055em;
+        line-height: 0.9em;
+        text-index: 0.03em;
+
+        &.me {
+            margin-top: 4px;
+            font-size: calc(var(--font-scaling) * 40px);
+            display: flex;
+            align-items: center;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: calc(var(--font-scaling) * 30px);
+                height: calc(var(--font-scaling) * 30px);
+                background: linear-gradient(135deg, #1A2980 0%, #26D0CE 100%);
+                border-radius: 50%;
+            }
+        }
+        &.it, &.hi {
+            font-size: calc(var(--font-scaling) * 20px);
+        }
+        &.it {
+            margin-top: 1.2em;
+        }
+    }
+    .links {
+        display: flex;
+        gap: 1em;
+        margin-top: 1.2em;
+        flex-wrap: wrap;
+        .link {
+            border-radius: 6px;
+            box-shadow: 0 0 20px 0 #00000030;
+            padding: 11px;
+            font-size: calc(var(--font-scaling) * 12px);
+            color: #fff;
+            text-decoration: none;
+            background-color: grey;
+            transition: 0.2s ease-in-out;
+            &:hover {
+                transform: scale(1.05);
+                transition: 0.2s ease-in-out;
+            }
+            &.twitter {
+                background-color: #1DA1F2
+            }
+            &.instagram {
+                background-color: #30618A
+            }
+            &.spotify {
+                background-color: #1DB954
+            }
+            &.github {
+                background-color: #333;
+            }
+            &.pinterest {
+                background-color: #E62C32;
+            }
+        }
+    }
+    .html-tag {
+        font-size: 1.1em;
+        opacity: 0.5;
+        font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace
+    }
+}
+</style>
